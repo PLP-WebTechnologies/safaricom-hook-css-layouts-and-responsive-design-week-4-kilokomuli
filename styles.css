@@ -1,0 +1,138 @@
+/* general reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: lightblue;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.image-content img {
+    width: 100%;
+    /* max-width: 400px; */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: lightblue;
+}
+
+/* Media Queries */
+
+/* Small Screens (up to 600px) */
+@media (max-width: 600px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .text-content,
+    .image-content {
+        padding: 10px;
+    }
+}
+
+/* Medium Screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    header,
+    footer {
+        justify-content: space-around;
+    }
+}
+
+/* Bonus: Transitions on Resize */
+body {
+    transition: all 0.5s ease;
+}
+
+img {
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
